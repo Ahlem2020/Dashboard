@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'src/app/Model/Subject';
+import { SubjectService } from 'src/app/services/subject.service';
 
 @Component({
   selector: 'app-subject',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubjectComponent implements OnInit {
 
-  constructor() { }
+  constructor(private subjectService: SubjectService) { }
+
+ListSubject : Subject[];
 
   ngOnInit(): void {
+    this.subjectService.ShowAll().subscribe(subject =>this.ListSubject=subject);
   }
 
 }

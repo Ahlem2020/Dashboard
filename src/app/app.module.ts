@@ -20,8 +20,11 @@ import { CondidatComponent } from './component/condidat/condidat.component';
 import { ModulesComponent } from './component/modules/modules.component';
 import { PartnerComponent } from './component/partner/partner.component';
 import { JobComponent } from './component/job/job.component';
-
-
+import { NotFoundComponent } from './component/not-found/not-found.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AddComponent } from './component/Subject/add/add.component';
+import { UpdateComponent } from './component/Subject/update/update.component';
+import { DetailsComponent } from './component/Subject/details/details.component';
 
 @NgModule({
   declarations: [
@@ -42,11 +45,16 @@ import { JobComponent } from './component/job/job.component';
     ModulesComponent,
     PartnerComponent,
     JobComponent,
+    NotFoundComponent,
+    AddComponent,
+    UpdateComponent,
+    DetailsComponent,
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
